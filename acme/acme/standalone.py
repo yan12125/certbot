@@ -1,4 +1,7 @@
 """Support for standalone client challenge solvers. """
+
+from __future__ import unicode_literals
+
 import argparse
 import collections
 import functools

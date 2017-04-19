@@ -1,4 +1,7 @@
 """ACME JSON fields."""
+
+from __future__ import unicode_literals
+
 import logging
 
 import pyrfc3339

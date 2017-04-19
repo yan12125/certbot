@@ -1,4 +1,7 @@
 """Tests for acme.jose.jwk."""
+
+from __future__ import unicode_literals
+
 import binascii
 import unittest
 

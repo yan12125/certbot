@@ -1,4 +1,7 @@
 """JSON Web Key."""
+
+from __future__ import unicode_literals
+
 import abc
 import binascii
 import json

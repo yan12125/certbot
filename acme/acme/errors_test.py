@@ -1,4 +1,8 @@
 """Tests for acme.errors."""
+
+from __future__ import unicode_literals
+
+import re
 import unittest
 
 import mock
@@ -12,7 +16,8 @@ class BadNonceTest(unittest.TestCase):
         self.error = BadNonce(nonce="xxx", error="error")
 
     def test_str(self):
-        self.assertEqual("Invalid nonce ('xxx'): error", str(self.error))
+        self.assertTrue(re.match(
+            r"Invalid nonce \(u?'xxx'\): error", str(self.error)))
 
 
 class MissingNonceTest(unittest.TestCase):

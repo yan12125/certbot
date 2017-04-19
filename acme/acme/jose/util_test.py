@@ -1,5 +1,9 @@
 """Tests for acme.jose.util."""
+
+from __future__ import unicode_literals
+
 import functools
+import re
 import unittest
 
 import six
@@ -156,7 +160,8 @@ class ImmutableMapTest(unittest.TestCase):
         self.assertEqual('A(x=1, y=2)', repr(self.a1))
         self.assertEqual('A(x=1, y=2)', repr(self.a1_swap))
         self.assertEqual('B(x=1, y=2)', repr(self.b))
-        self.assertEqual("B(x='foo', y='bar')", repr(self.B(x='foo', y='bar')))
+        self.assertTrue(re.match(
+            r"B\(x=u?'foo', y=u?'bar'\)", repr(self.B(x='foo', y='bar'))))
 
 
 class frozendictTest(unittest.TestCase):  # pylint: disable=invalid-name
@@ -192,7 +197,8 @@ class frozendictTest(unittest.TestCase):  # pylint: disable=invalid-name
         self.assertRaises(AttributeError, self.fdict.__setattr__, 'z', 3)
 
     def test_repr(self):
-        self.assertEqual("frozendict(x=1, y='2')", repr(self.fdict))
+        self.assertTrue(re.match(
+            r"frozendict\(x=1, y=u?'2'\)", repr(self.fdict)))
 
 
 if __name__ == '__main__':

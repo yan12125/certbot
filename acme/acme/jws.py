@@ -1,4 +1,7 @@
 """ACME JOSE JWS."""
+
+from __future__ import unicode_literals
+
 from acme import jose
 
 

@@ -1,4 +1,7 @@
 """JOSE interfaces."""
+
+from __future__ import unicode_literals
+
 import abc
 import collections
 import json

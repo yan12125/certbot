@@ -1,4 +1,7 @@
 """Tests for acme.fields."""
+
+from __future__ import unicode_literals
+
 import datetime
 import unittest
 

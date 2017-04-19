@@ -1,4 +1,7 @@
 """Tests for acme.util."""
+
+from __future__ import unicode_literals
+
 import unittest
 
 

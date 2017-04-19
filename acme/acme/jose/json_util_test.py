@@ -1,4 +1,7 @@
 """Tests for acme.jose.json_util."""
+
+from __future__ import unicode_literals
+
 import itertools
 import unittest
 

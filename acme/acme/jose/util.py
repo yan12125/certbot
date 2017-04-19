@@ -1,4 +1,7 @@
 """JOSE utilities."""
+
+from __future__ import unicode_literals
+
 import collections
 
 from cryptography.hazmat.primitives.asymmetric import rsa

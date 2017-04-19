@@ -3,6 +3,9 @@
 .. warning:: This module is not part of the public API.
 
 """
+
+from __future__ import unicode_literals
+
 import os
 import pkg_resources
 import unittest

@@ -6,6 +6,9 @@ The framework presented here is somewhat based on `Go's "json" package`_
 .. _`Go's "json" package`: http://golang.org/pkg/encoding/json/
 
 """
+
+from __future__ import unicode_literals
+
 import abc
 import binascii
 import logging

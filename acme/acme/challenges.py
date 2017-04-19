@@ -1,4 +1,7 @@
 """ACME Identifier Validation Challenges."""
+
+from __future__ import unicode_literals
+
 import abc
 import functools
 import hashlib
@@ -13,6 +16,7 @@ from acme import errors
 from acme import crypto_util
 from acme import fields
 from acme import jose
+from acme import util
 
 logger = logging.getLogger(__name__)
 
@@ -445,7 +449,8 @@ class TLSSNI01Response(KeyAuthorizationChallengeResponse):
         """
         # pylint: disable=protected-access
         sans = crypto_util._pyopenssl_cert_or_req_san(cert)
-        logger.debug('Certificate %s. SANs: %s', cert.digest('sha256'), sans)
+        logger.debug('Certificate %s. SANs: %s',
+                     cert.digest(util.openssl_digest_name('sha256')), sans)
         return self.z_domain.decode() in sans
 
     def simple_verify(self, chall, domain, account_public_key,

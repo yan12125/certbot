@@ -1,4 +1,7 @@
 """ACME protocol messages."""
+
+from __future__ import unicode_literals
+
 import collections
 
 from acme import challenges

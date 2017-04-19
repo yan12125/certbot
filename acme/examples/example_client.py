@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 """Example script showing how to use acme client API."""
 import logging
 import os

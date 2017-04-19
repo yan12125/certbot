@@ -1,4 +1,7 @@
 """Tests for acme.client."""
+
+from __future__ import unicode_literals
+
 import datetime
 import json
 import unittest

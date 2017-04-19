@@ -1,4 +1,7 @@
 """JOSE Web Signature."""
+
+from __future__ import unicode_literals
+
 import argparse
 import base64
 import sys

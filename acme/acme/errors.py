@@ -1,4 +1,7 @@
 """ACME errors."""
+
+from __future__ import unicode_literals
+
 from acme.jose import errors as jose_errors
 
 

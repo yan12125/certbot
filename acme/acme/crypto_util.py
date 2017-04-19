@@ -1,4 +1,7 @@
 """Crypto utilities."""
+
+from __future__ import unicode_literals
+
 import binascii
 import contextlib
 import logging
@@ -9,6 +12,7 @@ import sys
 import OpenSSL
 
 from acme import errors
+from acme import util
 
 
 logger = logging.getLogger(__name__)
@@ -176,7 +180,7 @@ def make_csr(private_key_pem, domains, must_staple=False):
     csr.add_extensions(extensions)
     csr.set_pubkey(private_key)
     csr.set_version(2)
-    csr.sign(private_key, 'sha256')
+    csr.sign(private_key, util.openssl_digest_name('sha256'))
     return OpenSSL.crypto.dump_certificate_request(
         OpenSSL.crypto.FILETYPE_PEM, csr)
 
@@ -263,5 +267,5 @@ def gen_ss_cert(key, domains, not_before=None,
     cert.gmtime_adj_notAfter(validity)
 
     cert.set_pubkey(key)
-    cert.sign(key, "sha256")
+    cert.sign(key, util.openssl_digest_name("sha256"))
     return cert

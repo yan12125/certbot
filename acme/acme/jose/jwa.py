@@ -3,6 +3,9 @@
 https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-40
 
 """
+
+from __future__ import unicode_literals
+
 import abc
 import collections
 import logging

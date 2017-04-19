@@ -22,6 +22,9 @@ particular the following RFCs:
   https://datatracker.ietf.org/doc/draft-ietf-jose-json-web-signature/
 
 """
+
+from __future__ import unicode_literals
+
 from acme.jose.b64 import (
     b64decode,
     b64encode,

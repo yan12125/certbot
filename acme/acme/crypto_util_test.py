@@ -1,4 +1,7 @@
 """Tests for acme.crypto_util."""
+
+from __future__ import unicode_literals
+
 import itertools
 import socket
 import threading
