@@ -1,5 +1,6 @@
 """Tests for certbot.cert_manager."""
 # pylint: disable=protected-access
+from __future__ import unicode_literals
 import os
 import re
 import shutil

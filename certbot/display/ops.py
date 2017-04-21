@@ -1,4 +1,5 @@
 """Contains UI methods for LE user operations."""
+from __future__ import unicode_literals
 import logging
 import os
 

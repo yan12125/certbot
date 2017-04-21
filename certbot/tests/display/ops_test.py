@@ -1,5 +1,6 @@
 # coding=utf-8
 """Test certbot.display.ops."""
+from __future__ import unicode_literals
 import os
 import sys
 import unittest
@@ -320,7 +321,7 @@ class ChooseNamesTest(unittest.TestCase):
         with mock.patch(
                 "certbot.display.ops.display_util.separate_list_input"
         ) as mock_sli:
-            unicode_error = UnicodeEncodeError('mock', u'', 0, 1, 'mock')
+            unicode_error = UnicodeEncodeError(b'mock', u'', 0, 1, b'mock')
             mock_sli.side_effect = unicode_error
             self.assertEqual(_choose_names_manually(), [])
         # Valid domains

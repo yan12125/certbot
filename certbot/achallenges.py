@@ -17,6 +17,7 @@ Note, that all annotated challenges act as a proxy objects::
   achall.token == challb.token
 
 """
+from __future__ import unicode_literals
 import logging
 
 from acme import challenges

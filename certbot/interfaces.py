@@ -1,4 +1,5 @@
 """Certbot client interfaces."""
+from __future__ import unicode_literals
 import abc
 import zope.interface
 

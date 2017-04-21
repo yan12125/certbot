@@ -1,4 +1,5 @@
 """Utilities for plugins discovery and selection."""
+from __future__ import unicode_literals
 import collections
 import itertools
 import logging
@@ -39,9 +40,14 @@ class PluginEntryPoint(object):
     @classmethod
     def entry_point_to_plugin_name(cls, entry_point):
         """Unique plugin name for an ``entry_point``"""
-        if entry_point.dist.key in cls.PREFIX_FREE_DISTRIBUTIONS:
-            return entry_point.name
-        return entry_point.dist.key + ":" + entry_point.name
+        entry_point_key = entry_point.dist.key
+        entry_point_name = entry_point.name
+        if six.PY2:
+            entry_point_key = entry_point_key.decode('ascii')
+            entry_point_name = entry_point_name.decode('ascii')
+        if entry_point_key in cls.PREFIX_FREE_DISTRIBUTIONS:
+            return entry_point_name
+        return entry_point_key + ":" + entry_point_name
 
     @property
     def description(self):

@@ -1,4 +1,5 @@
 """Tests for certbot.plugins.disco."""
+from __future__ import unicode_literals
 import unittest
 
 import mock

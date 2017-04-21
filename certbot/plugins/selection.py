@@ -1,5 +1,5 @@
 """Decide which plugins to use for authentication & installation"""
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 
 import os
 import logging

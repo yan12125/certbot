@@ -1,4 +1,5 @@
 """Tests for letsencrypt.plugins.selection"""
+from __future__ import unicode_literals
 import sys
 import unittest
 

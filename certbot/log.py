@@ -12,7 +12,7 @@ Special care is taken by both methods to ensure all errors are logged
 and properly flushed before program exit.
 
 """
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 import functools
 import logging
 import logging.handlers

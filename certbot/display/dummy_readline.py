@@ -1,4 +1,5 @@
 """A dummy module with no effect for use on systems without readline."""
+from __future__ import unicode_literals
 
 
 def get_completer():

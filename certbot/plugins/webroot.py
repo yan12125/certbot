@@ -1,4 +1,5 @@
 """Webroot plugin."""
+from __future__ import unicode_literals
 import argparse
 import collections
 import errno

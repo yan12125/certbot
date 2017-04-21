@@ -1,6 +1,6 @@
 """Tests for certbot.main."""
 # pylint: disable=too-many-lines
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 
 import itertools
 import mock

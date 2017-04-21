@@ -1,5 +1,6 @@
 """Tests for hooks.py"""
 # pylint: disable=protected-access
+from __future__ import unicode_literals
 
 import os
 import unittest

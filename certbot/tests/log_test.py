@@ -1,4 +1,5 @@
 """Tests for certbot.log."""
+from __future__ import unicode_literals
 import logging
 import logging.handlers
 import os

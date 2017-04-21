@@ -1,4 +1,5 @@
 """Test certbot.display.completer."""
+from __future__ import unicode_literals
 import os
 import readline
 import string

@@ -1,4 +1,5 @@
 """Tests for certbot.auth_handler."""
+from __future__ import unicode_literals
 import functools
 import logging
 import unittest

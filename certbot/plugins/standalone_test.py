@@ -1,4 +1,5 @@
 """Tests for certbot.plugins.standalone."""
+from __future__ import unicode_literals
 import argparse
 import socket
 import unittest

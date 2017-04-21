@@ -1,5 +1,6 @@
 """Send e-mail notification to system administrators."""
 
+from __future__ import unicode_literals
 import email
 import smtplib
 import socket

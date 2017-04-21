@@ -1,4 +1,5 @@
 """Tests for certbot.notify."""
+from __future__ import unicode_literals
 import socket
 import unittest
 

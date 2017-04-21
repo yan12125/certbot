@@ -1,4 +1,5 @@
 """Tools for checking certificate revocation."""
+from __future__ import unicode_literals
 import logging
 import re
 

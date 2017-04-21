@@ -1,4 +1,5 @@
 """Renewable certificates storage."""
+from __future__ import unicode_literals
 import datetime
 import glob
 import logging
@@ -367,7 +368,8 @@ class RenewableCert(object):
         # systemwide renewal configuration; self.configfile should be
         # used to make and save changes.
         try:
-            self.configfile = configobj.ConfigObj(config_filename)
+            # 'encoding' force unicode outputs for both py2 and py3
+            self.configfile = configobj.ConfigObj(config_filename, encoding='utf-8')
         except configobj.ConfigObjError:
             raise errors.CertStorageError(
                 "error parsing {0}".format(config_filename))

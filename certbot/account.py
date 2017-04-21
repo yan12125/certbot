@@ -1,4 +1,5 @@
 """Creates ACME accounts for server."""
+from __future__ import unicode_literals
 import datetime
 import hashlib
 import logging

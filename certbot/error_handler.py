@@ -1,4 +1,5 @@
 """Registers functions to be called if an exception or signal occurs."""
+from __future__ import unicode_literals
 import functools
 import logging
 import os

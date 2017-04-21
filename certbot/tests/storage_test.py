@@ -1,5 +1,6 @@
 """Tests for certbot.storage."""
 # pylint disable=protected-access
+from __future__ import unicode_literals
 import datetime
 import os
 import shutil

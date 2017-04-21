@@ -1,4 +1,5 @@
 """Utilities for all Certbot."""
+from __future__ import unicode_literals
 import argparse
 import atexit
 import collections

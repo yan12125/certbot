@@ -1,6 +1,6 @@
 """Tests for certbot.plugins.webroot."""
 
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 
 import argparse
 import errno
@@ -50,7 +50,7 @@ class AuthenticatorTest(unittest.TestCase):
 
     def test_more_info(self):
         more_info = self.auth.more_info()
-        self.assertTrue(isinstance(more_info, str))
+        self.assertTrue(isinstance(more_info, six.text_type))
         self.assertTrue(self.path in more_info)
 
     def test_add_parser_arguments(self):

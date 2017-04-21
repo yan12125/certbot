@@ -1,4 +1,5 @@
 """Provides Tab completion when prompting users for a path."""
+from __future__ import unicode_literals
 import glob
 # readline module is not available on all systems
 try:

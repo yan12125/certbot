@@ -1,4 +1,5 @@
 """Certbot Enhancement Display"""
+from __future__ import unicode_literals
 import logging
 
 import zope.component

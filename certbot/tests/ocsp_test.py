@@ -1,5 +1,6 @@
 """Tests for ocsp.py"""
 # pylint: disable=protected-access
+from __future__ import unicode_literals
 
 import unittest
 

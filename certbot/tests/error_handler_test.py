@@ -1,4 +1,5 @@
 """Tests for certbot.error_handler."""
+from __future__ import unicode_literals
 import contextlib
 import os
 import signal

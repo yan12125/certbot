@@ -1,6 +1,6 @@
 """Certbot command line argument & config processing."""
 # pylint: disable=too-many-lines
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 import argparse
 import copy
 import glob
@@ -137,9 +137,9 @@ def report_config_interaction(modified, modifiers):
     :type modifiers: iterable or str
 
     """
-    if isinstance(modified, str):
+    if isinstance(modified, six.text_type):
         modified = (modified,)
-    if isinstance(modifiers, str):
+    if isinstance(modifiers, six.text_type):
         modifiers = (modifiers,)
 
     for var in modified:
@@ -449,7 +449,7 @@ class HelpfulArgumentParser(object):
         if isinstance(help1, bool) and isinstance(help2, bool):
             self.help_arg = help1 or help2
         else:
-            self.help_arg = help1 if isinstance(help1, str) else help2
+            self.help_arg = help1 if isinstance(help1, six.text_type) else help2
 
         short_usage = self._usage_string(plugins, self.help_arg)
 

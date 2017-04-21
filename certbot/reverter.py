@@ -1,4 +1,5 @@
 """Reverter class saves configuration checkpoints and allows for recovery."""
+from __future__ import unicode_literals
 import csv
 import glob
 import logging

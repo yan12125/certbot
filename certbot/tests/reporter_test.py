@@ -1,4 +1,5 @@
 """Tests for certbot.reporter."""
+from __future__ import unicode_literals
 import mock
 import sys
 import unittest

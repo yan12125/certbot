@@ -1,4 +1,5 @@
 """Subscribes users to the EFF newsletter."""
+from __future__ import unicode_literals
 import logging
 
 import requests

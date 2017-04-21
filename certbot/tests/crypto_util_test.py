@@ -1,4 +1,5 @@
 """Tests for certbot.crypto_util."""
+from __future__ import unicode_literals
 import logging
 import os
 import unittest
